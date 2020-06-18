@@ -12,6 +12,15 @@ header{
     flex-wrap: wrap;
 }
 
+.initial{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+
 .text-blue{
     color: #0494d8;
 }
