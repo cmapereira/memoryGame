@@ -77,25 +77,34 @@ function playGame(){
       card.style.order = randomPosition;
       card.lastElementChild.classList.remove('hidden');
       card.lastElementChild.classList.remove('hidden');
-   })
+   });
 };
 
 function defFacil(){
    round = 120;
    copyround = 120;
    numrounds.textContent = copyround;
+   facil.classList.add('bg-red');
+   medio.classList.remove('bg-red');
+   dificil.classList.remove('bg-red');
 };
 
 function defMedio(){
    round = 90;
    copyround = 90;
    numrounds.textContent = copyround;
+   facil.classList.remove('bg-red');
+   medio.classList.add('bg-red');
+   dificil.classList.remove('bg-red');
 };
 
 function defDificil(){
    round = 60;
    copyround = 60;
    numrounds.textContent = copyround;
+   facil.classList.remove('bg-red');
+   medio.classList.remove('bg-red');
+   dificil.classList.add('bg-red');
 };
 
 cards.forEach(card => card.addEventListener('click', hiddenCard));

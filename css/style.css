@@ -33,6 +33,10 @@ header{
     color: #ed45ad;
 }
 
+.bg-red{
+    background: #ed45ad !important;
+}
+
 .title{
     width: 1200px;
     text-align: center;
@@ -55,23 +59,54 @@ header{
     text-align: center;
 }
 
-#jogar{
-    margin-top: 37.5px;
+.btcontrol{
     width: 100px;
     height: 30px;
     line-height: 30px;
     border-radius: 5px;
-    background-color:#0494d8;
     border: none;
-    color: white;
+    color: #fff0b5;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
+    background-color:#0494d8;
+    outline: none;
+}
+
+
+
+
+#jogar{
+    margin-top: 20px;
+    width: 150px;
+    height: 60px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color:#0494d8;
+    border: none;
+    color: #fff0b5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
 }
 
 #jogar:hover{
     box-shadow: 0 0 5px #ccc;
+}
+
+.textbox{
+    font-weight: 700;
+    color:#fff0b5;
+}
+
+#num-rounds{
+    font-weight: 700;
+    color: #ed45ad;
+    font-size: 1.4rem;
 }
 
 .table{
@@ -101,15 +136,7 @@ header{
 .hidden{
     display: none;
 }
-/*
-.flip{
-    transform: rotateY(180deg);
-}
 
-.flipinv{
-    transform: rotateY(-180deg);
-}
-*/
 .front, .back{
    
     width: 100%;
