@@ -1,0 +1,116 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #191a18;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-blue{
+    color: #0494d8;
+}
+
+.text-yellow{
+    color: #fff0b5;
+}
+
+.text-red{
+    color: #ed45ad;
+}
+
+.title{
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.control{
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.level, .play, .clicks{
+    width: 33.333%;
+    height: 100px;
+    text-align: center;
+}
+
+#jogar{
+    margin-top: 37.5px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color:#0494d8;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#jogar:hover{
+    box-shadow: 0 0 5px #ccc;
+}
+
+.table{
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /*perspective: 1000px;*/
+}
+
+.card{
+    width: calc(11.111% - 10px);
+    height: cald(25% - 10px);
+    position: relative;
+    margin: 5px;
+    /*transform-style: preserve-3d;*/
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0 0 5px #ccc;
+    transform: scale(.97);
+}
+
+.hidden{
+    display: none;
+}
+/*
+.flip{
+    transform: rotateY(180deg);
+}
+
+.flipinv{
+    transform: rotateY(-180deg);
+}
+*/
+.front, .back{
+   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer{
+    text-align: center;
+}
+

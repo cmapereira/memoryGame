@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Jogo da Memória</title>
 </head>
 <body>
@@ -10,20 +12,20 @@
 
     <header>
         <div class="title">
-            <h1>Jogo da Memória</h1>
-            <h2>Todo Bicho Tem Um Pouco de Gente</h2>
+            <h1><span class="text-blue">Jogo</span> <span class="text-yellow">da</span> <span class="text-red">Memória</span></h1>
+            <h3><span class="text-blue">Todo </span><span class="text-yellow">Bicho </span><span class="text-red">Tem </span><span class="text-blue">Um </span><span class="text-red">Pouco </span><span class="text-blue">De </span><span class="text-yellow">Gente </span></h3>
         </div>
         <div class="control">
             <div class="level">
                 <p>Nível do Jogo</p>
-                <button type="submit">Fácil</button>
-                <button type="submit">Médio</button>
-                <button type="submit">Difícil</button>
+                <button id="facil" type="submit">Fácil</button>
+                <button id="medio" type="submit">Médio</button>
+                <button id="dificil" type="submit">Difícil</button>
             </div>
             <div class="play">
-                <button type="submit">Jogar</button>
+                <button id="jogar" type="submit">Jogar</button>
             </div>
-            <div class="cliks">
+            <div class="clicks">
                 <p>Número de Cliques:</p>
                 <span>00</span>
             </div>
@@ -33,16 +35,159 @@
 
     <main>
         <div class="table">
-        
+            <div class="card" data-bicho="alce">
+                <img src="img/alce.jpg" alt="alce" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="alpaca">
+                <img src="img/alpaca.jpg" alt="alpaca" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="bugio">
+                <img src="img/bugio.jpg" alt="bugio" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="castor">
+                <img src="img/castor.jpg" alt="castor" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="coala">
+                <img src="img/coala.jpg" alt="coala" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="coruja">
+                <img src="img/coruja.jpg" alt="coruja" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="extra">
+                <img src="img/extra.jpg" alt="Todo bicho tem um pouco de gente" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="flamingo">
+                <img src="img/flamingo.jpg" alt="flamingo" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="gamba">
+                <img src="img/gamba.jpg" alt="gamba" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="kiwi">
+                <img src="img/kiwi.jpg" alt="kiwi" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="lemure">
+                <img src="img/lemure.jpg" alt="lemure" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="morcego">
+                <img src="img/morcego.jpg" alt="morcego" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="musaranho">
+                <img src="img/musaranho.jpg" alt="musaranho" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="ornitorrinco">
+                <img src="img/ornitorrinco.jpg" alt="ornitorrinco" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="ovelha">
+                <img src="img/ovelha.jpg" alt="ovelha" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="preguiça">
+                <img src="img/preguiça.jpg" alt="preguiça" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="raposa">
+                <img src="img/raposa.jpg" alt="raposa" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="sagui">
+                <img src="img/sagui.jpg" alt="sagui" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="alce">
+                <img src="img/alce.jpg" alt="alce" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="alpaca">
+                <img src="img/alpaca.jpg" alt="alpaca" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="bugio">
+                <img src="img/bugio.jpg" alt="bugio" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="castor">
+                <img src="img/castor.jpg" alt="castor" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="coala">
+                <img src="img/coala.jpg" alt="coala" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="coruja">
+                <img src="img/coruja.jpg" alt="coruja" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="extra">
+                <img src="img/extra.jpg" alt="Todo bicho tem um pouco de gente" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="flamingo">
+                <img src="img/flamingo.jpg" alt="flamingo" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="gamba">
+                <img src="img/gamba.jpg" alt="gamba" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="kiwi">
+                <img src="img/kiwi.jpg" alt="kiwi" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="lemure">
+                <img src="img/lemure.jpg" alt="lemure" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="morcego">
+                <img src="img/morcego.jpg" alt="morcego" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="musaranho">
+                <img src="img/musaranho.jpg" alt="musaranho" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="ornitorrinco">
+                <img src="img/ornitorrinco.jpg" alt="ornitorrinco" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="ovelha">
+                <img src="img/ovelha.jpg" alt="ovelha" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="preguiça">
+                <img src="img/preguiça.jpg" alt="preguiça" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="raposa">
+                <img src="img/raposa.jpg" alt="raposa" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
+            <div class="card" data-bicho="sagui">
+                <img src="img/sagui.jpg" alt="sagui" class="front">
+                <img src="img/verso.jpg" alt="jogo da memória" class="back">
+            </div>
         </div>
     </main>
 
-    
+
     <footer>
         <hr>
         <p>&reg Todos os Diretos Reservados - Márcia Elmiro</p>
     </footer>
 
-    
+    <script src="js/app.js"></script>
 </body>
 </html>
