@@ -2,14 +2,14 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #191a18;
+    background:#191a18;
     color: #eee;
     font-family: 'Montserrat', sans-serif;
 }
 
 header{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .initial{
@@ -47,7 +47,7 @@ header{
 
 .control{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 1200px;
     margin-bottom: 20px;
     margin: 0 auto;
@@ -57,6 +57,8 @@ header{
     width: 33.333%;
     height: 100px;
     text-align: center;
+    border: 1px solid #fff0b5;
+    margin-bottom: 20px;
 }
 
 .btcontrol{
@@ -148,5 +150,7 @@ header{
 
 footer{
     text-align: center;
+    background-color: #3a3a3d;
+    height: 50px;
 }
 
