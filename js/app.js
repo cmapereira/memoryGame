@@ -13,13 +13,14 @@ let points = 0;
 let round = 90;
 let copyround = 90;
 let lockboard = false;
+let databicho = [];
 
-function hiddenCard(){
+function hiddenCard(){ 
    //prevent double click
    if (lockboard) return;
    if (this === firstCard) return;
    this.lastElementChild.classList.add('hidden');
-   
+
    if(!hasFlipedCard){
       //first click
       hasFlipedCard = true;
@@ -35,6 +36,7 @@ function hiddenCard(){
 function checkForMatch(){
    //cards match
    if(firstCard.dataset.bicho === secondCard.dataset.bicho){
+      //databicho.push(firstCard.dataset.bicho);
       points ++;
       round --;
       //player wins
