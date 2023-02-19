@@ -7,6 +7,7 @@ let facil = document.querySelector('#facil');
 let medio = document.querySelector('#medio');
 let dificil = document.querySelector('#dificil');
 let numrounds = document.querySelector('#num-rounds');
+let image = document.querySelector('#resultgame');
 let hasFlipedCard = false;
 let firstCard, secondCard;
 let points = 0;
@@ -42,6 +43,7 @@ function checkForMatch(){
       //player wins
       if(points == 18){
          setTimeout(() => {
+            image.src = 'img/venceu.jpg';
             initial.classList.remove('hidden');
             table.classList.add('hidden');
          }, 1000)
@@ -64,6 +66,7 @@ function checkForMatch(){
    //player looses 
    if(round == 0){
       setTimeout(() => {
+         image.src = 'img/perdeu.jpg';
          initial.classList.remove('hidden');
          table.classList.add('hidden');
       }, 1000)
@@ -93,6 +96,7 @@ function playGame(){
 
 //easy way mode game
 function defFacil(){
+   image.src = 'img/extra.jpg';
    round = 90;
    copyround = 90;
    numrounds.textContent = copyround;
@@ -105,6 +109,7 @@ function defFacil(){
 
 //medium way mode game
 function defMedio(){
+   image.src = 'img/extra.jpg';
    round = 70;
    copyround = 70;
    numrounds.textContent = copyround;
@@ -117,6 +122,7 @@ function defMedio(){
 
 //hard way mode game
 function defDificil(){
+   image.src = 'img/extra.jpg';
    round = 50;
    copyround = 50;
    numrounds.textContent = copyround;
@@ -133,3 +139,5 @@ facil.addEventListener('click', defFacil);
 medio.addEventListener('click', defMedio);
 dificil.addEventListener('click', defDificil);
 play.addEventListener('click', playGame);
+
+console.log(image)
